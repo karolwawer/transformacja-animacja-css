@@ -1,0 +1,115 @@
+#rotate {
+    background-image: url(https://placeimg.com/640/480/any);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    transition: all 1s;
+}
+
+#rotate:hover {
+    transform: rotate(720deg);
+
+}
+
+#translate {
+    background-image: url(https://placeimg.com/640/480/any);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    transform: translateY(20px);
+
+}
+
+#container {
+    overflow: hidden;
+
+    width: 300px;
+    height: 300px;
+}
+
+#skala {
+    background-image: url(https://placeimg.com/640/480/animals);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    transition: all 2s;
+
+
+}
+
+#skala:hover {
+    transform: scale(1.5);
+
+}
+
+#animowany {
+    background-color: green;
+    height: 300px;
+    animation-name: przedluzenie;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes przedluzenie {
+    0%,
+    50%,
+    100% {
+        width: 400px;
+    }
+    25%,
+    75% {
+        width: 800px;
+    }
+}
+
+#hart {
+    font-size: 30px;
+
+}
+
+i {
+    color: red;
+    animation-name: pik;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes pik {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+.box {
+    width:300px;
+    height: 300px;
+    position:relative;
+    
+}
+.box-inner {
+    height: 100%;
+    width: 100%
+    position:relative;
+}
+.box-front {
+    background-color: orange;
+    z-index: 1;
+    
+}
+.box-back {
+    background-color: blue;
+    transform: rotatey(180dag)
+}
+.box:hover .box-front{
+    transform: rotateY(180dag)
+}
