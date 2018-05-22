@@ -91,25 +91,34 @@ i {
     }
 }
 .box {
-    width:300px;
-    height: 300px;
-    position:relative;
-    
+width: 300px;
+height: 300px;
+position: relative;
 }
+
 .box-inner {
-    height: 100%;
-    width: 100%
-    position:relative;
+height: 100%;
+width: 100%;
+position: absolute;
 }
+
 .box-front {
-    background-color: orange;
-    z-index: 1;
-    
+background-color: orange;
+z-index: 1;
+transition: all 0.4s;
+backface-visibility: hidden;
 }
+
 .box-back {
-    background-color: blue;
-    transform: rotatey(180dag)
+background-color: blue;
+transform: rotateY(180deg);
+transition: all 0.4s;
 }
-.box:hover .box-front{
-    transform: rotateY(180dag)
+
+.box:hover .box-front {
+transform: rotateY(180deg);
+}
+
+.box:hover .box-back {
+transform: rotateY(0deg);
 }
